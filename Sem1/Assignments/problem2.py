@@ -45,7 +45,8 @@ def get_second_largest(elements):
     for i in elements[1:]:
         if i > largest:
             largest, second_largest = i, largest
-
+    if largest == second_largest:
+        second_largest = "Error"
     return second_largest
 
 print(get_second_largest(input_data))
